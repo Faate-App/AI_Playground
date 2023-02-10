@@ -1,0 +1,72 @@
+File Manifest for ICPSR 30103
+
+Rosenfeld, Michael J., Reuben J. Thomas, and Maja Falcon. How Couples Meet
+and Stay Together (HCMST), Wave 1 2009, Wave 2 2010, Wave 3 2011, Wave 4
+2013, Wave 5 2015, United States. ICPSR30103-v8. Ann Arbor, MI: Inter-
+university Consortium for Political and Social Research [distributor],
+2016-03-18. http://doi.org/10.3886/ICPSR30103.v8
+
+Details on the version history can be found below the file listings.
+
+
+Study-level Documentation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    30103-descriptioncitation.pdf       -       -         -       2016-03-18  -
+
+    30103-related_literature.txt        -       -         -       daily       -
+
+    30103-manifest.txt                  -       -         -       daily       -
+
+
+DS0001 Public Use Data
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    30103-0001-Codebook.pdf             -       -         -       2016-03-18  e5201249da4fad9460dc2bbff0d16b9d
+
+    30103-0001-Data.dta                 -       4,002     534     2016-03-18  b168c7390dbbb101b62004ed5700ba0f
+
+    30103-0001-Data.rda                 -       4,002     534     2016-03-18  b9be045beb752d0370b5e2f5d60eba75
+
+    30103-0001-Data.sav                 -       4,002     534     2016-03-18  6ab2db556e997b4aae5b2f70770dec16
+
+    30103-0001-Data.stc                 -       4,002     534     2016-03-18  d98b7ed3e7616d6173bc23bb5fd71d12
+
+    30103-0001-Data.tsv                 -       4,002     534     2016-03-18  94e8ca3f22e59289a950d4de0a388c20
+
+    30103-0001-Data.txt                 1284    4,002     534     2016-03-18  5632ff15991ef8febfe166f6423f4c49
+
+    30103-0001-Questionnaire.pdf        -       -         -       2016-03-18  bcf5ef1f3e936d8aa32a60f2717901e4
+
+    30103-0001-Setup.dct                -       -         -       2016-03-18  b1e32065770d12c9f01911995bb5d745
+
+    30103-0001-Setup.do                 -       -         -       2016-03-18  0ea99781f010ae76413335a71d54a3cc
+
+    30103-0001-Setup.sas                -       -         -       2016-03-18  45cd7b0cfe3d26d4d35ead6a02a64953
+
+    30103-0001-Setup.sps                -       -         -       2016-03-18  dae3eef5c3089fad4408f929198df180
+
+    30103-0001-Supplemental_syntax.do   -       -         -       2016-03-18  933f5e0ebfe538450c35071c55ff17d2
+
+    30103-0001-Supplemental_syntax.sas  -       -         -       2016-03-18  857f88496509cdbdedd879973819eded
+
+
+Version History
+
+2016-03-18 Wave 5 variables have been added to the public data.
+Supplemental string variables for Wave 4 and 5 (W4_QUALITY_TEXT,
+W4_WHY_BROKE_UP, W5_P_NONMONOGOMY_EXP, W5_IDENTITY_OTHER, and
+W5_WHY_BROKE_UP) are being released as restricted use only.  2014-09-02
+Wave 4 variables have been added to the public use data.  2013-01-16 The
+citation has been updated to include an additional PI. Variables Q24 and
+Q35 are being released as restricted use only.  2013-01-03 Nine variables
+have been added to the public use collection and 19 variables have been
+added to the restricted use collection.  2012-05-25 The citation has been
+updated to include an additional PI.  2012-04-06 The data have been further
+processed by the principal investigator. In addition, a number of variables
+have been added to the data set.  2011-11-22 In order to prevent disclosure
+risk, several variables were dropped from the public use file.
