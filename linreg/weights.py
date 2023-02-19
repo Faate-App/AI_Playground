@@ -1,4 +1,5 @@
 import numpy as np
+import numpy.linalg as nl
 
 
 def sum_features_multiplied(features_mat):
@@ -6,8 +7,13 @@ def sum_features_multiplied(features_mat):
 
 
 def get_weights(features_mat, y):
-    xtx_inverse = np.invert(sum_features_multiplied(features_mat))
-    xtranspose = np.transpose(features_mat)
-    weights_vect = np.matmul(np.matmul(xtx_inverse, xtranspose), y)
-    return weights_vect
+    xarr = np.array(features_mat, ndmin=2)
+    yarr = np.array(y)
 
+    xtx_inverse = nl.inv(sum_features_multiplied(xarr))
+    xtranspose = np.matrix.transpose(xarr)
+
+    inverse_transpose_mult = np.matmul(xtranspose, xtx_inverse)
+    weights_vect = np.matmul(yarr, inverse_transpose_mult)
+
+    return weights_vect
