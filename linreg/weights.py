@@ -17,7 +17,3 @@ def get_weights(features_mat, y):
     weights = xtx_inv.dot(x_transpose).dot(yarr)
 
     return weights
-
-
-print(get_weights([5.6, 6.5, 6.8, 6.9, 7.0, 7.4, 8.0, 8.3, 8.7, 9.0],
-                  [5.0, 7.1, 8.4, 7.3, 7.8, 8.1, 7.4, 8.9, 9.0, 10.0]))
