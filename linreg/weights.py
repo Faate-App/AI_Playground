@@ -1,19 +1,19 @@
 import numpy as np
-import numpy.linalg as nl
 
 
-def sum_features_multiplied(features_mat):
-    return np.matmul(features_mat, np.matrix.transpose(features_mat))
-
-
+# get weights coeffs for a model according to matrix formula
 def get_weights(features_mat, y):
-    xarr = np.array(features_mat, ndmin=2)
-    yarr = np.array(y)
+    # verticalization of vectors
+    yarr = np.array(y).transpose()
+    xarr = np.matrix(features_mat)
+    xarr = np.insert(arr=xarr, obj=0, values=np.ones(yarr.shape), axis=0).transpose()
 
-    xtx_inverse = nl.inv(sum_features_multiplied(xarr))
-    xtranspose = np.matrix.transpose(xarr)
+    x_transpose = xarr.transpose()
 
-    inverse_transpose_mult = np.matmul(xtranspose, xtx_inverse)
-    weights_vect = np.matmul(yarr, inverse_transpose_mult)
+    xtx = x_transpose.dot(xarr)
 
-    return weights_vect
+    xtx_inv = np.linalg.inv(xtx)
+
+    weights = xtx_inv.dot(x_transpose).dot(yarr)
+
+    return weights
