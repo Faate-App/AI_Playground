@@ -1,0 +1,262 @@
+CaseID : Case ID
+CASEID_NEW : Longitudnal CaseID
+qflag : DOV: Qualification Flag
+weight1 : Post-Stratification weight for Genpop (n=2994)
+weight2 : Post-Stratification weight for LGB (n=551)
+weight1a : Post-Stratification weight for total consented Genpop respondents (n=3110)
+weight1a_freqwt : Weighted up to CPS adult population
+weight_combo : Weight that combines all LGB subjects weighted down, with gen pop
+weight_combo_freqwt : Frequency weight version of weight_combo
+duration : Interview duration in minutes
+speed_flag : Respondents who completed survey in under 2 minutes
+consent : Do you consent to participate in this study
+xlgb : LGB Sample
+S1 : Are you married?
+S2 : Do you have a boyfriend, a girlfriend, a sexual partner or a romantic partner?
+S3 : Have you EVER had a boyfriend, a girlfriend, or a sexual or romantic partner?
+DOV_Branch : Data-only variable: DOV_Branch
+Q3_Refused : [Refused] What is your [spouse, i.e. husband or wife's; boyfriend/girlfriend's]...
+Q4 : Next are questions about [Partner name] and the family [Partner name] grew up with
+Q5 : Is [Partner name] the same sex as you?
+Q6A : Is [Partner name] Latino or Hispanic?
+Q6B : What is [Partner name]'s race?
+Q9 : How old is [Partner name]?
+Q10 : What is the highest level of
+Q11 : What is the highest level of schooling [Partner name] has completed?
+Q12 : What is the highest level of schooling [Partner name]'s MOTHER has completed?
+Q14 : Generally speaking, does [Partner name] think of [herself/themself] as:
+Q15A7 : When you actually met [Partner name] in person for the first time, did you meet
+Q16 : How many of your relatives do you see in person at least once a month?
+Q16_Refused : [Refused] How many of your relatives do you see in person at least once a month?
+Q17A : Including your current marriage, how many times have you been married?
+Q17B : How many times have you been married? (LABA)
+Q17C : What Gender are you most attracted to, sexually?
+Q17D : What Gender are you most attracted to, sexually? (duplicate)
+Q19 : Are you currently living with [Partner name]?
+Q20 : Have you ever lived together with [Partner name]?
+Q21A_Year : [Year] In what Year and Month did you first meet [Partner_Name]?
+Q21A_Month : [Month] In what Year and Month did you first meet [Partner_Name]?
+Q21B_Year : [Year] In what year and month did your romantic relationship with [Partner_Name] begin?
+Q21B_Month : [Month] In what year and month did your romantic relationship with [Partner_Name] begin?
+Q21C_Year : [Year] In what year and month did you first live together with [Partner_Name]?
+Q21C_Month : [Month] In what year and month did you first live together with [Partner_Name]?
+Q21D_Year : [Year] In what Year and Month did you marry [Partner_Name]?
+Q21D_Month : [Month] In what Year and Month did you marry [Partner_Name]?
+w6_identity : Do you think of yourself as
+w6_outness : Thinking about the important people in your life, how many are aware that you are
+w6_outness_timing : How old were you when a few of the important people in your life first became aware
+Q24_Refused : [Refused] Please write the story of how you and [Partner name] first met and got
+Q25 : Did you and [Partner name] attend the same high school?
+Q26 : Did you and [Partner name] attend the same college or university?
+Q27 : Did you and [Partner name] grow up in the same city or town?
+Q28 : Did your parents know [Partner name]'s parents before you met [Partner name]?
+w6_friend_connect_1 : I knew one (or more) of [Partner name]'s friends before meeting [Partner name].
+w6_friend_connect_2 : [Partner name] knew one (or more) of my friends before I met [Partner name].
+w6_friend_connect_3 : One (or more) of my friends knew one (or more) of [Partner name]'s friends before we met
+w6_friend_connect_4 : None of the above (regarding friends connections) - Choose ALL that apply
+w6_friend_connect_Refused : [Refused] Choose ALL that apply (regarding friends connections)
+Q32 : Did you use an Internet service to meet [Partner name]?
+Q34 : In general, how would you describe the quality of your relationship with [Partner name]?
+Q35_Refused : [Refused] In your own words, explain why your relationship with [Partner name] is the way it is
+w6_sex_frequency : During the last 12 months, about how often did you have sex with [Partner name]?
+w6_otherdate : In the past year, have you ever met someone for dating, for romance, or for sex?
+w6_how_many : How many Different people besides [Partner name] have you met for dating, or romance, in the past year?
+w6_how_meet_Refused : [Refused] How did you meet this person (for dating, romance, or sex) you met last year?
+w6_otherdate_app : In the Past Year have you ever used an app on your phone (such as Tinder or Grindr) to meet someone for dating or romance?
+w6_how_many_app : Of the [Selected response from w6_how_many] you met in the past year, how many did you meet using a dating app?
+Past_Partner_Q1 : Were you ever married to [Partner name]?
+w6_relationship_end_nonmar : How did your relationship with [Partner name] end? (for non-married relationships)
+w6_breakup_nonmar : How did your relationship with [Partner name] end? (for non-married relationships)
+w6_relationship_end_mar : How did your marriage to [Partner name] end?
+w6_who_breakup : Between you and [Partner name], who wanted more to break up?
+Q5_2 : [Is/Was] [Partner name] the same sex as you?
+Q6A_2 : [Is/Was] [Partner name] Latino or Hispanic?
+Q9B_2 : What year was [Partner name] born?
+Q10_2 : What is the highest level of schooling [Partner name] completed?
+Q11_2 : What is the highest level of schooling [Partner name]'s MOTHER completed?
+Q12_2 : Generally speaking, did [Partner name] think of [himself/herself/themself] as (regarding political stance)?
+Q14_2 : What is the highest level of schooling YOUR MOTHER has completed?
+Q15A7_2 : When you actually met [Partner name] in person for the first time, did you meet (regarding location)?
+Q16_2 : How many of your relatives do you see in person at least once a month? Include parents, siblings, grandparents, etc.
+Q17B_2 : What Gender are you most attracted to, sexually?
+Q17C_2 : What Gender are you most attracted to, sexually?
+Q20_2 : Have you ever lived together with [Partner name]?
+Q21A_2_Year : [Year] In what Year and Month did you first meet [Partner_Name]?
+Q21A_2_Month : [Month] In what Year and Month did you first meet [Partner_Name]?
+Q21B_2_Year : [Year] In what year and month did your romantic relationship with [Partner_Name] begin?
+Q21B_2_Month : [Month] In what year and month did your romantic relationship with [Partner_Name] begin?
+Q21C_2_Year : [Year] In what year and month did you first live together with [Partner_Name]?
+Q21C_2_Month : [Month] In what year and month did you first live together with [Partner_Name]?
+Q21D_2_Month : [Month] In what Year and Month did you marry [Partner_Name]?
+Q21E_2_Year : [Year] In what Year and Month did you break up with [Partner_Name]?
+Q21E_2_Month : [Month] In what Year and Month did you break up with [Partner_Name]?
+Q21F_2_start_range : For programming purpose.
+Q21F_2_Year : [Year] In what Year and Month did [Partner_Name] pass away?
+Q21F_2_Month : [Month] In what Year and Month did [Partner_Name] pass away?
+w6_identity_2 : Do you think of yourself as (regarding sexual orientation)?
+w6_outness_2 : Thinking about the important people in your life, how many are aware that you are (sexual orientation)?
+w6_outness_timing_2 : How old were you when a few of the important people in your life first became aware of your sexual orientation?
+Q23_2 : When you and [Partner name] were last together, who earned more income?
+Q25_2 : Did you and [Partner name] attend the same high school?
+Q26_2 : Did you and [Partner name] attend the same college or university?
+Q27_2 : Did you and [Partner name] grow up in the same city or town?
+Q28_2 : Did your parents know [Partner name]’s parents before you met [Partner name]?
+w6_friend_connect_2_1 : [I knew one (or more) of [Partner name]'s friends before meeting [Partner name].
+w6_friend_connect_2_2 : [[Partner name] knew one (or more) of my friends before I met [Partner name].]
+w6_friend_connect_2_3 : [One (or more) of my friends knew one (or more) of [Partner name]'s friends before meeting [Partner name].]
+w6_friend_connect_2_4 : [None of the above.] Choose as many as apply.
+w6_friend_connect_2_Refused : [Refused] Choose as many as apply.
+Q32_2 : Did you use an Internet service to meet [Partner name]?
+w6_otherdate_2 : In the past year, have you ever met someone for dating, for romance, or for sex?
+w6_how_many_2 : How many different people have you met for dating, or romance, or sex in the past year?
+w6_otherdate_app_2 : In the Past Year, have you ever used an app on your phone (such as Tinder or Grindr) to meet someone new for dating or romance, or for sex?
+w6_how_many_app_2: Of the [Selected response from w6_how_many] you met in the past year, how many did you meet using a dating app (such as Tinder or Grindr)?
+partyid7: DERIVED: Political party affiliation (7 categories)
+PERSNET_hom: PERSNET: Do you access the Internet at home?
+ppc10017: CU7: To the best of your knowledge, is the cell phone you use most often a smartphone?
+ppc21310: CU35: How often do you USUALLY access the internet?
+ppp20071: Q26A: Would you describe yourself as a born-again or evangelical Christian?
+ppp20072: Q27: How often do you attend religious services?
+ppage: Age
+ppagecat: Age - 7 Categories
+ppagect4: Age - 4 Categories
+ppeduc: Education (Highest Degree Received)
+ppeducat: Education (Categorical)
+ppethm: Race / Ethnicity
+ppgender: Gender
+pphhhead: Household Head
+pphhsize: Household Size
+pphouse: Housing Type
+ppincimp: Household Income
+ppmarit: Marital Status
+ppmsacat: MSA Status
+PPREG4: Region 4 - Based on State of Residence
+PPREG9: Region 9 - Based on State of Residence
+pprent: Ownership Status of Living Quarters
+PPT01: Presence of Household Members - Children 0-1
+PPT25: Presence of Household Members - Children 2-5
+PPT612: Presence of Household Members - Children 6-12
+PPT1317: Presence of Household Members - Children 13-17
+PPT18OV: Presence of Household Members - Adults 18+
+ppwork: Current Employment Status
+Race_1: [White] Please choose one or more race(s) that you consider yourself to be
+Race_2: [Black or African American] Please choose one or more race(s) that you consider yourself to be
+Race_3: [American Indian or Alaska Native] Please choose one or more race(s) that you consider yourself to be
+Race_4: [Asian] Please choose one or more race(s) that you consider yourself to be
+Race_5: [Native Hawaiian or other Pacific Islander] Please choose one or more race(s) that you consider yourself to be
+Race_6: [Some other race] Please choose one or more race(s) that you consider yourself to be
+race1, race2, race3, ..., race15: Q14: Please choose one or more race(s) that you consider yourself to be (White, Black or African American, American Indian or Alaska Native, Asian Indian, Chinese, Filipino, Japanese, Korean, Vietnamese, Other Asian, Hawaiian, Guamanian, Samoan, Other Pacific Islander, Some other race)
+w6_took_the_survey: Whether subject took the survey, or was excluded
+w6_prior_identity_lgb: Whether subject was LGB in prior GfK survey based on weight2 and xlgb
+w6_same_sex_couple: Based on w6_prior_identity_lgb ==1 & w6_q5==1
+w6_same_sex_couple_gender: Based on w6_same_sex_couple and ppgender
+w6_q4: Partner gender
+w6_q5: Same-sex couple based on Q5 and Q5_2
+w6_q6a: Partner Hispanic
+w6_q6b: Partner's race
+w6_q9: Partner age in 2017
+w6_q10: Partner's educational attainment
+w6_q11: Partner's mother's Education
+w6_q12: Partner political affiliation
+w6_q14: Subject's mother's educational attainment
+w6_q17: Times subject has married
+w6_attraction: Gender of attraction, based on Q17C and Q17D, and ppgender
+w6_q19: Are you currently living with [partner]?
+w6_q20: Ever lived with partner?
+w6_q21a_year: Year subject first met partner
+w6_q21a_month: Month subject first met partner
+w6_q21a_month_flag: Whether month first met has been allocated
+w6_q21b_year: Year subject began romantic relationship with partner
+w6_q21b_month: Month subject began romantic relationship with partner
+w6_q21b_month_flag: Whether month of relationship beginning is randomly allocated
+w6_q21c_year: Year subject first lived with partner
+w6_q21c_month: Month subject first lived with partner
+w6_q21c_month_flag: =1 if month of first cohabitation is randomly allocated
+w6_q21d_year: Year subject married partner
+w6_q21d_month: Month subject married partner
+w6_q21e_year: Year of breakup
+w6_q21e_month: Month of breakup
+w6_q21f_year: Year partner died
+w6_q21f_month: Month partner died
+w6_identity_all: Subject sexual identity
+w6_outness_all: GLB outness: how many of the important people in your life know you are GLB?
+w6_outness_timing_all: How old subject was when came out
+w6_q23: Who earned more (in 2016 or when last together)
+w6_q24_length: Length of q24 how met answer in characters
+w6_q25: Did subject and partner attend the same H.S.?
+w6_q26: Did subject and partner attend the same college?
+w6_q27: Did subject and partner grow up in the same city or town?
+w6_q28: Did subject's parents know partner's parents before subject knew partner?
+w6_friend_connect_1_all: Subject knew partner's friends before meeting partner
+w6_friend_connect_2_all: Partner knew subject's friends before meeting subject
+w6_friend_connect_3_all: Subject's friends knew partner's friends before subject and partner met
+w6_friend_connect_4_all: No prior connection between subject's friends and partner's friends
+w6_q32: Did you use an Internet service to meet partner?
+w6_q34: How would you describe the relationship between you and your partner?
+w6_otherdate_all: In the past year, have you met anyone for dating, romance, or sex (not including current partner)?
+w6_how_many_all: How many people did you meet (not including current partner, if partnered) last year?
+w6_otherdate_app_all: Did you use a phone app last year to meet someone (not including current partner, if partnered)?
+w6_how_many_app_all: How many people did you meet (not including partner) last year through phone apps?
+w6_number_people_met: Based on w6_how_many_all and w6_otherdate_all
+w6_otherdate_dichotomous: Did subject meet someone last year (other than current partner)?
+w6_married: Based on S1
+relate_duration_at_w6_years: July 2017 - year and month when the relationship started (Q21B) if in a current relationship
+w6_number_people_met_app: Number of people met through phone apps last year, from w6_how_many_app_all, w6_oth
+W6_OTHER: A different version of the weight_combo variable that weights LGB a little too highly
+weight_combo_v2: Partnership status based on S1, S2, S3
+female: Based on ppgender
+year_fraction_met: = w6_q21a_year + ((w6_q21a_month - 0.5) / 12)
+year_fraction_relstart: = w6_q21b_year + ((w6_q21b_month - 0.5) / 12)
+age_when_met: Age when met in years, = ppage - (2017 - w6_q21a_year)
+time_from_met_to_rel: = year_fraction_relstart - year_fraction_met
+year_fraction_first_cohab: = w6_q21c_year + ((w6_q21c_month - 0.5) / 12)
+time_from_rel_to_cohab: = year_fraction_first_cohab - year_fraction_relstart, negative reset to zero
+hcm2017q24_R_cowork: Respondent's coworker: intermediary or partner
+hcm2017q24_R_friend: Respondent's friend: intermediary or partner
+hcm2017q24_R_family: Respondent's family: intermediary
+hcm2017q24_R_sig_other: Respondent's (current or past) significant other: intermediary
+hcm2017q24_R_neighbor: Respondent's residential neighbor: intermediary or partner
+hcm2017q24_P_cowork: Partner's coworker: intermediary or respondent
+hcm2017q24_P_friend: Partner's friend: intermediary
+hcm2017q24_P_family: Partner's family: intermediary
+hcm2017q24_P_sig_other: Partner's (current or past) significant other: intermediary
+hcm2017q24_P_neighbor: Partner's residential neighbor: intermediary or respondent
+hcm2017q24_btwn_I_cowork: Coworker relationship between intermediaries
+hcm2017q24_btwn_I_friend: Friendship between intermediaries
+hcm2017q24_btwn_I_family: Family relationship between intermediaries
+hcm2017q24_btwn_I_sig_other: Significant other relationship between intermediaries
+hcm2017q24_btwn_I_neighbor: Intermediaries are neighbors
+hcm2017q24_school: Met in primary or secondary school
+hcm2017q24_college: Met in college
+hcm2017q24_mil: Met during military service
+hcm2017q24_church: Met in or through church or religious organization
+hcm2017q24_vol_org: Met through voluntary organization (non-church)
+hcm2017q24_customer: Customer-client relationship
+hcm2017q24_bar_restaurant: Bar, restaurant, or other public social gathering place
+hcm2017q24_party: Private party
+hcm2017q24_internet_other: Internet, not otherwise classified
+hcm2017q24_internet_dating: Met through Internet dating or phone app
+hcm2017q24_internet_soc_network: Met through internet social network
+hcm2017q24_internet_game: Met through online gaming
+hcm2017q24_internet_chat: Met through Internet chat
+hcm2017q24_internet_org: Met through Internet site not mainly dedicated to dating
+hcm2017q24_public: Met in public place
+hcm2017q24_blind_date: Met on blind date
+hcm2017q24_vacation: Met while on vacation
+hcm2017q24_single_serve_nonint: Non-internet single service
+hcm2017q24_business_trip: Met while on business trip
+hcm2017q24_work_neighbors: Met as work neighbors
+hcm2017q24_met_online: Met online, all kinds
+hcm2017_q24_length: Networking
+hcm2017q24_summary_all_codes: Yes/No
+w6_relationship_quality: Quality of existing relationships based on w6_q34
+hcm2017q24_met_through_family: 1 if R_family or P_family =1
+hcm2017q24_met_through_friend: 1 if R_friend or P_friend=1
+hcm2017q24_met_through_as_nghbrs: 1 if R_neighbor or P_neighbor=1
+hcm2017q24_met_as_through_cowork: 1 if R_cowork or P_cowork=1
+w6_subject_race: Based on single races Race_x
+interracial_5cat: Based on w6_subject_race and w6_q6b
+partner_mother_yrsed: Recode of w6_q11 (partner's mother's education)
+subject_mother_yrsed: Recode of w6_q14 (Subject's mother's educational attainment)
+partner_yrsed: Recode of w6_q10 (partner's educational attainment)
+subject_yrsed: Recode of ppeduc (Education (Highest Degree Received))

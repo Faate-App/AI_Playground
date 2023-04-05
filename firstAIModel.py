@@ -1,9 +1,13 @@
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import OneHotEncoder
 
-# Load the data
 df = pd.read_stata("stanford data set/HCMST 2017 fresh sample for public sharing draft v1.1.dta")
 
-# Map relationship satisfaction categories to numerical values
 satisfaction_mapping = {
     'Refused': -1,
     'Excellent': 5,
@@ -33,8 +37,63 @@ duration_min = df['relationship_duration'].min()
 duration_max = df['relationship_duration'].max()
 df['relationship_duration_norm'] = (df['relationship_duration'] - duration_min) / (duration_max - duration_min)
 
-# Calculate compatibility score (average of normalized satisfaction and duration)
-df['compatibility_score'] = (df['relationship_satisfaction_norm'] + df['relationship_duration_norm']) / 2
+# Map marital status to numerical values
+marital_status_mapping = {
+    'No, I am not Married': 0,
+    'Yes, I am Married': 1
+}
 
-# Display the DataFrame with new columns
-print(df[['Q34', 'relationship_satisfaction_norm', 'Q21B_Year', 'relationship_duration', 'relationship_duration_norm', 'compatibility_score']].head())
+df['marital_status_num'] = df['S1'].map(marital_status_mapping)
+
+df['compatibility_score'] = 0.7 * df['relationship_satisfaction_norm'] + 0.2 * df['relationship_duration_norm'] + 0.1 * df['marital_status_num'].astype(int)
+
+# Sélection des caractéristiques d'intérêt
+features = [
+    'Q6B', 'Q9', 'Q10',
+    'ppeduc', 'ppage', 'ppgender', 'ppethm',
+]
+
+# For each feature, display number of NA rows
+for feature in features:
+    print(feature, df[feature].isna().sum())
+
+target = 'compatibility_score'
+
+dfClean = df[features + [target]]
+
+# Convert Q9 to int
+dfClean['Q9'] = pd.to_numeric(dfClean['Q9'], errors='coerce')
+
+# Gestion des valeurs manquantes
+dfClean = dfClean.dropna()
+
+# Encodage des variables catégorielles
+cat_features = ['Q6B', 'Q10', 'ppeduc', 'ppgender', 'ppethm']
+enc = OneHotEncoder()
+encoded_features = enc.fit_transform(dfClean[cat_features]).toarray()
+encoded_feature_names = enc.get_feature_names_out(cat_features)
+
+df_encoded = pd.DataFrame(encoded_features, columns=encoded_feature_names, index=dfClean.index)
+dfClean = pd.concat([dfClean.drop(cat_features, axis=1), df_encoded], axis=1)
+
+# Division des données en ensembles d'entraînement et de test
+X = dfClean.drop(target, axis=1)
+y = dfClean[target]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Entraînement du modèle
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Prédiction sur l'ensemble de test
+y_pred = model.predict(X_test)
+
+# Calcul de l'erreur quadratique moyenne
+mse = mean_squared_error(y_test, y_pred)
+print("MSE:", mse)
+
+# Print root mean squared error
+rmse = np.sqrt(mse)
+print("RMSE:", rmse)
+
+print(len(dfClean))
