@@ -10,7 +10,7 @@ def sae(model_func, exact_y_arr):
 
 
 def mae(model_func, exact_y_arr):
-    return sae(model_func, exact_y_arr)
+    return sae(model_func, exact_y_arr) / len(exact_y_arr)
 
 
 def sse(model_func, exact_y_arr):
@@ -20,6 +20,10 @@ def sse(model_func, exact_y_arr):
         sum_of_errors += difference * difference
 
     return sum_of_errors
+
+
+def mse(model_func, exact_y_arr):
+    return sse(model_func, exact_y_arr) / len(exact_y_arr)
 
 
 def sse_tot(model_func, exact_y_arr):
@@ -33,5 +37,4 @@ def sse_tot(model_func, exact_y_arr):
 
 
 def r_squarred(model_func, exact_y_arr):
-    return 1-sse(model_func, exact_y_arr)/sse_tot(model_func, exact_y_arr)
-
+    return 1 - sse(model_func, exact_y_arr) / sse_tot(model_func, exact_y_arr)
