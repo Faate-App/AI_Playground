@@ -6,6 +6,28 @@ import requests
 from geopy.geocoders import Nominatim
 import geopandas as gpd
 from shapely.geometry import Point
+from transformers import pipeline
+
+# Analyse de sentiment avancée avec Hugging Face Transformers
+def analyze_sentiment_transformers(text):
+    classifier = pipeline('sentiment-analysis')
+    return classifier(text)
+
+# Analyse de thèmes/domaines avec Hugging Face Transformers
+def analyze_domain(text):
+    # Utiliser un modèle spécifique pour la classification de thème
+    classifier = pipeline('zero-shot-classification', model='facebook/bart-large-mnli')
+
+    # Définissez une liste étendue des thèmes/domaines potentiels
+    candidate_labels = [
+        "santé", "économie", "sport", "technologie", "politique", "éducation", "environnement",
+        "art et culture", "science", "société", "histoire", "loisirs", "psychologie",
+        "droit et législation", "mode et beauté", "religion et spiritualité", "actualités et médias",
+        "littérature et écriture", "entreprise et management", "voyage et tourisme"
+    ]
+
+    # Appliquer le modèle de classification
+    return classifier(text, candidate_labels)
 
 def age_to_interval(age_str):
     try:
@@ -106,6 +128,16 @@ Age = 22
 Sexe = "Homme"
 Taille = 193 #En cm
 photo = "data//DSC_0434.JPG"
+# Exemple de texte
+Bio = """🌟 Aventurier dans l'âme, amateur de café et de conversations profondes. Passionné par tout ce qui touche à l'art et à la culture, je passe mes week-ends à explorer de nouveaux endroits, que ce soit un petit café caché en ville ou un sentier de randonnée inexploré. J'adore l'idée de faire des rencontres spontanées et authentiques.
+
+✨ Amateur de cuisine, je me défends plutôt bien derrière les fourneaux. Mon défi du moment ? Réussir le parfait soufflé au fromage. Acceptes-tu de relever le défi avec moi ?
+
+🎸 Musique : de Bowie à Billie Eilish, ma playlist est aussi variée que mes intérêts. Tu joues d'un instrument ? C'est un gros plus !
+
+🐕 Ami des animaux, j'ai un golden retriever nommé Max qui est un expert en câlins.
+
+🔍 À la recherche de quelqu'un avec qui partager des rires, des aventures et peut-être des soufflés ratés. Si tu aimes l'art, la nature, ou que tu as simplement une bonne histoire à raconter, on pourrait bien s'entendre ! Swipe right et voyons où cela nous mène…"""
 latitude = 48.86151123046875
 longitude = 2.1342475414276123
 Person_to_study = Person(Nom, Prenom, Age, Sexe, Taille, photo,longitude,latitude)
@@ -291,19 +323,28 @@ else:
     datacouple['Age Range'] = datacouple['Age']
 print(f"Pour les {Person_to_study.sexe}s âgés de {Person_to_study.age} ans, la proportion vivant seuls est de {pourcentage_seul}%.")
 data_for_gender = get_data_couple_age(Person_to_study.age,  Person_to_study.sexe, datacouple)
+
 print(data_for_gender)
 
 iris_code = get_iris_code_from_coordinates(latitude, longitude)
 print(pop_age_seul(Person_to_study.age,basecouple[basecouple["IRIS"] == iris_code]))
 populationtotal = basecouple[basecouple["IRIS"] == iris_code]["Pop Ménages en 2020 (compl)"]
-print(populationtotal)
+print("Population total : ",populationtotal)
+unionlibre = basecouple[basecouple["IRIS"] == iris_code]["Pop 15 ans ou plus en concubinage ou union libre en 2020 (princ)"]
+print("Nombre de personnes unionlibre : ",unionlibre)
+pacsée = basecouple[basecouple["IRIS"] == iris_code]["Pop 15 ans ou plus pacsée en 2020 (princ)"]
+print("Nombre de personnes pacsée : ",pacsée)
+marier = basecouple[basecouple["IRIS"] == iris_code]["Pop 15 ans ou plus mariée en 2020 (princ)"]
+print("Nombre de personnes mariées : ",marier)
 popu_veuf = basecouple[basecouple["IRIS"] == iris_code]["Pop 15 ans ou plus veuves ou veufs en 2020 (princ)"]
-print(popu_veuf)
+print("Population veuf : ",popu_veuf)
 popu_divorce = basecouple[basecouple["IRIS"] == iris_code]["Pop 15 ans ou plus divorcée en 2020 (princ)"]
-print(popu_divorce)
+print("Popu divorce ",popu_divorce)
 popu_celib = basecouple[basecouple["IRIS"] == iris_code]["Pop 15 ans ou plus célibataire en 2020 (princ)"]
-print(popu_celib)
-
+print("Popu celib : ",popu_celib)
+inconnu = populationtotal - unionlibre - pacsée - marier - popu_veuf - popu_divorce - popu_celib
+print("Inconnu : ",inconnu)
+print("Nom de la commune de la personne : ",basecouple[basecouple["IRIS"] == iris_code]["Libellé commune ou ARM"])
 hommes_correspondants, femmes_correspondantes = detect_gender_by_age(basecouple[basecouple["IRIS"] == iris_code])
 
 for i in hommes_correspondants:
@@ -313,6 +354,12 @@ for i in hommes_correspondants:
 for i in femmes_correspondantes:
     print(i, basecouple[basecouple["IRIS"] == iris_code][i])
     break
+
+sentiment_transformers = analyze_sentiment_transformers(Bio)
+domain_analysis = analyze_domain(Bio)
+
+print("Analyse de Sentiment (Transformers):", sentiment_transformers[0]['label'])
+print("Analyse de Domaine:", domain_analysis['labels'][:3])
 
 print(Person_to_study)
 

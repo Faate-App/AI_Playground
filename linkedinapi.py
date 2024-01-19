@@ -2,8 +2,8 @@ import requests
 from urllib.parse import urlencode
 
 # Paramètres de l'application LinkedIn
-client_id = 'dddd'
-client_secret = 'dddddd'
+client_id = '78qgu8h2m8c2xu'
+client_secret = 'orZUESvHnqsZ6gkd'
 redirect_uri = 'https://www.faate.app/'
 authorization_base_url = 'https://www.linkedin.com/oauth/v2/authorization'
 token_url = 'https://www.linkedin.com/oauth/v2/accessToken'
